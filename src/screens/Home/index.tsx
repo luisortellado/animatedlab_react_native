@@ -53,8 +53,8 @@ export function Home() {
     setLoadingMore(false);
   };
 
-  const renderItem: ListRenderItem<Pokemon> = ({item}) => (
-    <PokemonCard name={item.name} url={item.url} />
+  const renderItem: ListRenderItem<Pokemon> = ({item, index}) => (
+    <PokemonCard name={item.name} url={item.url} index={index} />
   );
 
   if (loading) {
